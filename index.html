@@ -50,32 +50,35 @@
                         majority have suffered
                         alteration in some form, by injected humou.</p>
                     <div class="md:w-[85%] md:flex">
-                        <input class="w-full py-4 pl-5 rounded-lg" type="text" placeholder="Search your food">
-                        <button class="py-4 px-10 rounded-lg bg-[#FFC107] md:ml-[-40px] mt-4 md:mt-0 ">Search</button>
+                        <input id="search-field" class="w-full py-4 pl-5 rounded-lg" type="text"
+                            placeholder="Search your food">
+                        <button onclick="showAll()" id="search-btn"
+                            class="py-4 px-10 rounded-lg bg-[#FFC107] md:ml-[-40px] mt-4 md:mt-0 ">Search</button>
                     </div>
                 </div>
             </div>
 
         </section>
     </header>
+    <!-- main section -->
     <main class="container max-auto ">
-        <h2 class="font-semibold text-3xl text-center mt-[120px] mb-[50px]">Your Favourite Food</h2>
-        <div id="cards-container" class="w-[80%] mx-auto grid grid-cols-2 gap-6">
-            <!-- <div class="card lg:card-side bg-base-100 shadow-xl">
-                <figure><img src="" alt="Album" /></figure>
-                <div class="card-body">
-                    <h2 class="card-title">Name</h2>
-                    <p>Click the button to listen on Spotiwhy app.</p>
-                    <div class="card-actions justify-end">
-                        <a class="underline decoration-1 text-[#FFC107] font-semibold">View Details</a>
-                    </div>
-                </div>
-            </div> -->
+        <h2 id="section-title" class="font-semibold text-3xl text-center mt-[120px] mb-[50px] hidden">Your Favourite
+            Food</h2>
+        <div id="cards-container" class="w-[80%] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6">
 
         </div>
-        <button class="btn border-0 text-black font-bold bg-[#FFC107] mx-auto block mt-[85px]"
+        <button id="showAll-btn" class="btn border-0 text-black font-bold bg-[#FFC107] mx-auto  mt-[85px] hidden"
             onclick="showAll(event)">Show
             All</button>
+
+        <!-- modal -->
+
+        <input type="checkbox" id="my-modal-6" class="modal-toggle" />
+        <div class="modal modal-bottom sm:modal-middle">
+            <div id="single-meal-container" class="modal-box w-11/12">
+
+            </div>
+        </div>
 
     </main>
 
