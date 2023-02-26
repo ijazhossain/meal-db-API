@@ -1,11 +1,12 @@
 const loadMeal = (searchText, event) => {
+    console.log(searchText);
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchText}`)
         .then(res => res.json())
         .then(data => displayMeal(data.meals, event))
 }
 const displayMeal = (meals, event) => {
     const eventText = event?.target?.innerText;
-    console.log(eventText);
+    // console.log(eventText);
     const meals6 = meals.slice(0, 6);
     const mealsContainer = document.getElementById('cards-container');
     mealsContainer.textContent = '';
@@ -22,6 +23,13 @@ const showAll = (event) => {
     const searchText = document.getElementById('search-field');
     loadMeal(searchText.value, event);
 }
+document.getElementById('search-field').addEventListener('keyup', (e) => {
+    console.log(e.key);
+    const searchText = document.getElementById('search-field');
+    if (e.key === 'Enter') {
+        loadMeal(searchText.value);
+    }
+})
 const setInnerHtml = array => {
     const mealsContainer = document.getElementById('cards-container');
     array.forEach(meal => {
@@ -59,7 +67,7 @@ const singleMealDetails = async (meal) => {
                 <p class="py-4"><span class="font-semibold">Instructions:</span> ${meal.strInstructions}</p>
                 <p class="py-4"><span class="font-semibold">:</span><a href="${meal.strYoutube}">${meal.strYoutube}</a></p>
                 <div class="modal-action">
-                    <label for="my-modal-6" class="btn bg-[#DC3545] font-semibold text-white">Close</label>
+                    <label for="my-modal-6" class="btn bg-[#DC3545] font-semibold text-white border-0 hover:bg-red-900">Close</label>
                 </div>
     `;
 }
@@ -68,4 +76,4 @@ const toggleDisplay = (id, displayStyle) => {
     elementObj.style.display = displayStyle;
 }
 
-
+loadMeal('');

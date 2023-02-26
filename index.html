@@ -53,7 +53,7 @@
                         <input id="search-field" class="w-full py-4 pl-5 rounded-lg" type="text"
                             placeholder="Search your food">
                         <button onclick="showAll()" id="search-btn"
-                            class="py-4 px-10 rounded-lg bg-[#FFC107] md:ml-[-40px] mt-4 md:mt-0 ">Search</button>
+                            class="py-4 px-10 rounded-lg bg-[#FFC107] md:ml-[-40px] mt-4 md:mt-0 font-bold text-xl">Search</button>
                     </div>
                 </div>
             </div>
@@ -61,10 +61,10 @@
         </section>
     </header>
     <!-- main section -->
-    <main class="container max-auto ">
+    <main class="container mx-auto">
         <h2 id="section-title" class="font-semibold text-3xl text-center mt-[120px] mb-[50px] hidden">Your Favourite
             Food</h2>
-        <div id="cards-container" class="w-[80%] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div id="cards-container" class="w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
 
         </div>
         <button id="showAll-btn" class="btn border-0 text-black font-bold bg-[#FFC107] mx-auto  mt-[85px] hidden"
@@ -81,6 +81,47 @@
         </div>
 
     </main>
+    <footer class="container mx-auto py-10 md:py-28 bg-[#fffcf3] mt-28">
+        <section class="md:grid md:grid-cols-2 lg:grid-cols-5 w-[80%] mx-auto gap-16">
+            <ul class="text-[#403F3F]  mt-[40px] md:mt-0">
+                <h3 class="font-bold text-2xl mb-[20px]">Section</h3>
+                <li class="font-medium text-xl mb-[20px]">Home</li>
+                <li class="font-medium text-xl mb-[20px]">Features</li>
+                <li class="font-medium text-xl mb-[20px]">Pricing</li>
+                <li class="font-medium text-xl mb-[20px]">FAQs</li>
+                <li class="font-medium text-xl mb-[20px]">About</li>
+            </ul>
+            <ul class="text-[#403F3F]  mt-[40px] md:mt-0">
+                <h3 class="font-bold text-2xl mb-[20px]">UI UX Design</h3>
+                <li class="font-medium text-xl mb-[20px]">Product Design</li>
+                <li class="font-medium text-xl mb-[20px]">Back End Developer</li>
+                <li class="font-medium text-xl mb-[20px]">Front End Developer</li>
+            </ul>
+            <ul class="text-[#403F3F]  mt-[40px] md:mt-0">
+                <h3 class="font-bold text-2xl mb-[20px]">Resource</h3>
+                <li class="font-medium text-xl mb-[20px]">FAQ</li>
+                <li class="font-medium text-xl mb-[20px]">Support</li>
+                <li class="font-medium text-xl mb-[20px]">Privacy Policy</li>
+                <li class="font-medium text-xl mb-[20px]">Terms of Service</li>
+            </ul>
+            <div class="lg:col-span-2 mt-[40px] md:mt-0">
+                <h3 class="font-bold text-2xl mb-[20px]">Subscribe to our newsletter</h3>
+                <p class="text-[#706F6F] text-lg">I remember you recounting something more extraordinary years ago -
+                    that you
+                    enjoyed a restaurant
+                    meal.</p>
+                <div class="mt-6 lg:flex items-center justify-center gap-4">
+                    <input class="block py-[11px] pl-[24px] e
+                rounded-lg text-lg text-[#706F6F] bg-inherit border border-[#cfcdc5] w-full" type="email"
+                        placeholder="Email address">
+                    <button
+                        class="mt-5 lg:mt-0 block btn border-0 text-xl text-[#100F0F] font-bold bg-[#FFC107]">Subscribe</button>
+                </div>
+            </div>
+        </section>
+
+
+    </footer>
 
 
 
